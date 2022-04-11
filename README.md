@@ -1,6 +1,6 @@
 # Barbershop "Borodinski". Modern and adaptive UI.
 
-###Description
+### Description
 This is simple web server which holds HTML/CSS adaptive markup with rich functional features.
 
 To get more information and statistical reports, please visit screenshot folder.
