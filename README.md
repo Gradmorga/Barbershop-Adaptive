@@ -7,7 +7,7 @@ To get more information and statistical reports, please visit screenshot folder.
 
 
 ### Features
-- Adaptive markup for different platforms and also images for retina displays;
+- Adaptive markup for different platforms;
 - Retina display support;
 - Styles according to BEM methodology;
 - Usage of many Js plugins;
