@@ -1,0 +1,109 @@
+
+.container {
+    position: relative;
+    border-top:    1px solid transparent;
+    border-bottom: 1px solid transparent;
+
+    &::before, &::after {
+        position: absolute;
+        right: 0;
+        z-index: 99;
+
+        content: "";
+
+        display: none;
+        width: 0;
+        height: 0;
+
+        border-width: $block-decoration-height 50vw 0 50vw;
+        text-align: center;
+        border-style: solid;
+    }
+
+    &--white {
+        background-color: white;
+
+        &::before {
+            border-color: transparent white white white;
+        }
+
+        &::after {
+            border-color: white transparent transparent transparent;
+        }
+    }
+
+    &--gray {
+        background-color: $lightgrey;
+
+        &::before {
+            border-color: transparent $lightgrey $lightgrey $lightgrey;
+        }
+
+        &::after {
+            border-color: $lightgrey transparent transparent transparent;
+        }
+    }
+
+    &--top-decoration {
+        &::before {
+            top: -$block-decoration-height - 1;  // plus border size
+            display: block;
+        }
+    }
+
+    &--bottom-decoration {
+        &::after {
+            bottom: -$block-decoration-height - 1;
+            display: block;
+        }
+    }
+}
+
+.container__title {
+    margin: 0 0 15px;
+
+    @media (max-width: $mobile-width) {
+        text-align: center;
+    }
+
+    @media(min-width: $tablet-width) {
+        margin-bottom: 30px;
+    }
+}
+
+.container__button {
+    display: block;
+
+    text-align: center;
+    right: $mobile-padding;
+
+    @media (min-width: $tablet-width) {
+        position: absolute;
+        top: -20px;
+        right: $tablet-desktop-padding;
+        margin: 0;
+    }
+}
+
+.container__wrapper {
+    max-width: 960px;
+
+    padding-left: $mobile-padding;
+    padding-right: $mobile-padding;
+    margin: $block-spacing-mobile auto;
+
+    position: relative;
+
+    @media (min-width: $tablet-width) {
+        padding-left: $tablet-desktop-padding;
+        padding-right: $tablet-desktop-padding;
+
+        margin-top: $block-spacing-tablet;
+        margin-bottom: $block-spacing-tablet;
+    }
+
+    @media (min-width: $desktop-width) {
+        margin-top: $block-spacing-desktop;
+        margin-bottom: $block-spacing-desktop;
+    }
+}

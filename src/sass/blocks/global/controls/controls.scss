@@ -1,0 +1,59 @@
+.button {
+    tab-index: 1;
+
+    background-color: transparent;
+    border: 1px solid rgba(0, 0, 0, 0.3);
+
+    padding: 15px 25px;
+
+    text-decoration: none;
+
+    transition: all 300ms ease-in-out;
+
+    font-weight: bold;
+    text-transform: uppercase;
+
+    &:hover {
+        color: #fff;
+        border-color: $brawn;
+        background-color: $brawn;
+    }
+
+    &:active {
+        opacity: 0.3;
+    }
+}
+
+.button--brown {
+    color: white;
+    background-color: $brawn;
+    border-color: $brawn;
+
+    font-size: 18px;
+
+    &:hover {
+        background-color: white;
+        color: $brawn;
+    }
+}
+
+.input {
+    padding: 15px;
+    border: 1px solid rgba(0, 0, 0, .4);
+    margin: 0.5vw;
+
+    color: black;
+    line-height: 1;
+    font-size: 16px;
+
+    transition: box-shadow 300ms ease-in-out;
+
+    &:focus {
+        box-shadow: 0 0 20px 5px $brawn;
+    }
+
+    &::placeholder {
+        opacity: 1;
+        color: black;
+    }
+}

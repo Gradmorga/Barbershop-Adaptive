@@ -1,0 +1,212 @@
+
+.statistic {
+    border-top: none;
+}
+
+.statistic__wrapper {
+    position: relative;
+
+    @media (max-width: $mobile-width) {
+        padding: 0;
+        margin-top: 0;
+    }
+
+    @media (min-width: $tablet-width) {
+        $stats-shift: -232px;
+
+        top: $stats-shift;
+        margin-bottom: $stats-shift;
+    }
+
+    @media (min-width: $desktop-width) {
+        $stats-shift: -163px;
+
+        top: $stats-shift;
+        margin: auto auto $stats-shift;
+
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+    }
+}
+
+.statistic_header {
+    background-color: #ffffff;
+    color: #000000;
+
+    padding: 28px 20px;
+
+    @media (min-width: $tablet-width) {
+        position: relative;
+        padding: 32px 34px 30px 34px;
+
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+
+        &::before {
+            content: "";
+
+            position: absolute;
+            top: 42px;
+            left: -23px;
+            width: 23px;
+            height: 23px;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1 1'%3E%3Cpolygon points='0,0 1,0 1,1' fill='white'/%3E%3C/svg%3E");
+        }
+    }
+
+    @media (min-width: $desktop-width) {
+        grid-template-columns: auto;
+        grid-template-rows: min-content 1fr min-content;
+        align-content: start;
+    }
+}
+
+.statistic__slogan {
+    margin: 0;
+    margin-bottom: 13px;
+    text-align: center;
+    text-transform: uppercase;
+    line-height: 1;
+    font-weight: bold;
+    font-size: 30px;
+
+    @media (min-width: $tablet-width) {
+        margin-bottom: 17px;
+        text-align: left;
+        text-transform: none;
+        font-size: 40px;
+    }
+
+    @media (min-width: $desktop-width) {
+        margin-bottom: 32px;
+    }
+}
+
+.statistic__intro {
+    margin: 0;
+    line-height: 1.35;
+    text-align: center;
+
+    @media (max-width: $mobile-width) {
+        br { display: none; }
+    }
+
+    @media (min-width: $tablet-width) {
+        padding-top: 4px;
+        padding-left: 34px;
+        text-align: left;
+    }
+
+    @media (min-width: $desktop-width) {
+        padding-left: 0;
+
+        br { display: none; }
+    }
+}
+
+.statistic__legend {
+    margin: 0;
+
+    display: block;
+    line-height: 1;
+
+    opacity: 40%;
+
+    @media (min-width: $mobile-width) {
+        font-size: 18px;
+    }
+
+    &--top {
+        padding-top: 15px;
+
+        @media (max-width: $mobile-width) {
+            color: black;
+            display: none;
+
+            br { display: none; }
+        }
+    }
+
+    &--bottom {
+        color: white;
+        text-align: center;
+        margin: 0 auto;
+
+        @media (min-width: $tablet-width) {
+            display: none;
+        }
+    }
+}
+
+.statistic__list {
+    margin: 0;
+    margin-bottom: 20px;
+    background-color: #353535;
+
+    @media (min-width: $tablet-width) {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    @media (min-width: $desktop-width) {
+        margin: 0;
+    }
+}
+
+.statistic__item {
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+
+    @media (min-width: $tablet-width) {
+        display: block;
+        padding: 25px 34px 34px 30px;
+    }
+
+    &:nth-child(1) {
+        background-color: #3f3f3f;
+    }
+
+    &:nth-child(2) {
+        background-color: #4e4e4e;
+    }
+
+    &:nth-child(4) {
+        background-color: #4e4e4e;
+
+        @media (min-width: $tablet-width) {
+            background-color: #3f3f3f;
+        }
+    }
+}
+
+.statistic__number {
+    line-height: 1;
+    font-weight: bold;
+    font-size: 40px;
+    color: white;
+
+    @media (min-width: $tablet-width) {
+        margin-bottom: 12px;
+        font-size: 72px;
+    }
+
+    sup {
+        position: static;
+        margin-left: 5px;
+        vertical-align: baseline;
+        font-size: inherit;
+    }
+}
+
+.statistic__description {
+    margin: 0;
+    text-align: right;
+    line-height: 1;
+
+    @media (min-width: $tablet-width) {
+        text-align: left;
+
+        br { display: none; }
+    }
+}

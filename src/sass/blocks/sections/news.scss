@@ -1,0 +1,152 @@
+
+.news {
+    border-bottom: 2px solid rgba(0, 0, 0, 0.4);
+}
+
+.news__list {
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+
+    @media (min-width: $tablet-width) {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+}
+
+.news__item {
+    text-decoration: none;
+
+    position: relative;
+
+    display: flex;
+    align-items: center;
+
+    transition: all 2s ease-in-out;
+
+    min-height: 100px;
+
+    &--non-tablet {
+        @media (min-width: $tablet-width) and (max-width: $desktop-width) {
+            display: none;
+        }
+    }
+
+    @media (max-width: $mobile-width) {
+        padding-bottom: 15px;
+    }
+
+    @media (min-width: $tablet-width) {
+        padding: 0 10px;
+    }
+
+    &:hover {
+        & .news__shield {
+            background-color: $brawn;
+        }
+
+        & .news__shield::before {
+            border-bottom-color: $brawn;
+        }
+
+        & .news__text {
+            color: $brawn;
+            text-decoration: $brawn underline;
+        }
+    }
+}
+
+.news__holder {
+    position: relative;
+    flex-grow: 1;
+
+    @media (min-width: $tablet-width) {
+        width: 50%;
+    }
+
+    @media (min-width: $desktop-width) {
+        width: 33%;
+    }
+
+    &:not(:last-child)::after {
+        content: "";
+
+        height: 1px;
+        background-color: black;
+        opacity: 0.3;
+
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+
+        @media (min-width: $tablet-width) {
+            display: none;
+        }
+    }
+}
+
+.news__shield {
+    height: 60px;
+    width: 60px;
+    margin: 0;
+    background: #000;
+    position: absolute;
+
+    transition: background-color 0.5s ease-in-out;
+
+    top: 20%;
+
+    &::before {
+        content: "";
+
+        height: 0;
+        width: 0;
+
+        position: absolute;
+        left: 0;
+        bottom: -33%;
+
+        transition: border-bottom-color 0.5s ease-in-out;
+
+        transform: rotate(180deg);
+
+        border-bottom: 20px solid #000;
+        border-left: 30px solid transparent;
+        border-right: 30px solid transparent;
+    }
+}
+
+.news__date {
+    display: block;
+    width: inherit;
+    text-align: center;
+
+    position: relative;
+    top: 7px;
+
+    font-weight: bold;
+    line-height: 27px;
+}
+
+.news__date b {
+    display: inherit;
+    width: inherit;
+    text-align: inherit;
+
+    position: absolute;
+
+    font-size: 30px;
+}
+
+.news__text {
+    margin: 0 0 0 70px;
+
+    transition: color, text-decoration 0.5s ease-in-out;
+
+    @media (max-width: $tablet-width) {
+        br {
+            display: none;
+        }
+    }
+}

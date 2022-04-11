@@ -1,0 +1,28 @@
+@import "service/mixins";
+@import "service/variables";
+@import "service/fonts";
+@import "blocks/global/rest.scss";
+
+@import "blocks/global/normalize";
+
+
+@import "blocks/sections/page-block.scss";
+@import "blocks/document/page.scss";
+@import "blocks/document/header/header";
+@import "blocks/global/controls/controls";
+
+@import "blocks/document/header/nav";
+@import "blocks/document/header/nav-links";
+@import "blocks/document/header/user-list";
+@import "blocks/sections/statistic.scss";
+@import "blocks/document/header/logo";
+@import "blocks/sections/advantages.scss";
+@import "blocks/global/controls/slider";
+@import "blocks/sections/news.scss";
+@import "blocks/sections/reviews.scss";
+@import "blocks/document/footer/page-footer";
+@import "blocks/document/main/page-main";
+@import "blocks/sections/appointment.scss";
+@import "blocks/sections/gallery.scss";
+@import "blocks/sections/prices.scss";
+

@@ -1,0 +1,252 @@
+
+.appointment {
+    &::before {
+        @media (max-width: $mobile-width) {
+            display: none;
+        }
+    }
+
+    @media (min-width: $tablet-width) {
+        margin-bottom: 50px;
+    }
+}
+
+.appointment__title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-transform: uppercase;
+
+    margin-top: $block-spacing-mobile;
+    margin-bottom: 10px;
+
+    text-align: center;
+
+    font-weight: normal;
+
+    @media (min-width: $tablet-width) {
+        margin-top: $block-spacing-tablet;
+    }
+
+    &::before,
+    &::after {
+        content: "";
+
+        flex-grow: 1;
+        flex-shrink: 0;
+        height: 2px;
+        background-color: rgba(0, 0, 0, 0.4);
+    }
+
+    &::before {
+        margin-right: 15px;
+    }
+
+    &::after {
+        margin-left: 15px;
+    }
+}
+
+.appointment__inputs-layout {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+
+    @media (min-width: $tablet-width) {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+}
+
+.appointment__input {
+    @media (min-width: $tablet-width) {
+        margin: 1% 1%;
+    }
+}
+
+.appointment__surname-input,
+.appointment__name-input,
+.appointment__patronymic-input {
+    @media (min-width: $tablet-width) {
+        flex-grow: 1;
+        flex-basis: 26%;
+    }
+}
+
+.appointment__patronymic-input,
+.appointment__email-input {
+    @media (max-width: $mobile-width) {
+        margin-bottom: 25px;
+    }
+}
+
+.appointment__phone-input,
+.appointment__email-input {
+    @media (min-width: $tablet-width) {
+        flex-grow: 1;
+        flex-basis: 42%
+    }
+}
+
+.appointment__additional-input {
+    min-height: 75px;
+    overflow: hidden;
+    resize: vertical;
+
+    @media (min-width: $tablet-width) {
+        flex-grow: 1;
+    }
+}
+
+.appointment__beards-layout {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.appointment__beard input:focus .appointment__beard {
+    box-shadow: 0 0 20px 5px $brawn;
+}
+
+.appointment__beard {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    width: 70px;
+    margin-top: 40px;
+
+    position: relative;
+
+    cursor: pointer;
+
+    font-size: 14px;
+
+    @keyframes wave {
+        0%   { transform: scale(0) }
+        100% { transform: scale(1) }
+    }
+
+    transition: box-shadow 300ms ease-in-out;
+
+    & input[type=radio]:focus ~ .appointment__beard-checkmark {
+        box-shadow: 0 -5px 10px 5px $brawn;
+    }
+
+    & input[type=radio]:checked ~ .appointment__beard-checkmark::before {
+        content: "";
+
+        position: absolute;
+        top: 5px;
+        left: 5px;
+
+        transition: box-shadow 300ms ease-in-out;
+
+        width: 30px;
+        height: 30px;
+        border: none;
+
+        background-color: #aa907d;
+        border-radius: 50%;
+
+        animation: wave 0.3s ease-in-out;
+    }
+}
+
+.appointment__beard-checkmark {
+    position: absolute;
+
+    transition: box-shadow 300ms ease-in-out;
+
+    top: -40px;
+    left: 15px;
+    width: 40px;
+    height: 40px;
+    border: 1px solid rgba(0, 0, 0, .3);
+    border-radius: 50%;
+}
+
+.appointment__additional-layout {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.appointment__additional {
+    position: relative;
+    margin: 10px 0 10px 35px;
+    width: 30%;
+
+    @media (min-width: $tablet-width) {
+        width: 22%;
+        margin-left: 10%;
+    }
+
+    @media (min-width: $desktop-width) {
+        width: 20%;
+        margin-left: 12%;
+    }
+
+    @keyframes fading  {
+        0% { opacity: 0 }
+        100% { opacity: 1 }
+    }
+
+    & input[type=checkbox]:focus ~ .appointment__additional-checkmark {
+        box-shadow: 0 -5px 10px 5px $brawn;
+    }
+
+    & input[type=checkbox]:checked ~ .appointment__additional-checkmark::before {
+        top: 10px;
+        left: 4px;
+
+        height: 10px;
+
+        transform: rotate(-35deg);
+
+        animation: fading 0.3s ease-in-out;
+    }
+
+    & input[type=checkbox]:checked ~ .appointment__additional-checkmark::after {
+        top: 1px;
+        left: 12px;
+
+        height: 20px;
+
+        transform: rotate(35deg);
+
+        animation: fading 0.3s ease-in-out;
+    }
+}
+
+.appointment__additional-checkmark {
+    position: absolute;
+
+    left: -35px;
+    top: 5%;
+
+    width: 23px;
+    height: 23px;
+
+    transition: box-shadow 300ms ease-in-out;
+
+    border: 1px solid rgba(0, 0, 0, .4);
+
+    &::after,
+    &::before {
+        content: "";
+
+        position: absolute;
+
+        width: 2px;
+
+        background-color: black;
+    }
+}
+
+.appointment__submit {
+    display: block;
+    width: 100%;
+    margin-top: 50px;
+}

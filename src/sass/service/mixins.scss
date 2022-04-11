@@ -1,0 +1,4 @@
+@mixin size($height: 20px, $width: 20px) {
+  font-size: $height;
+  widows: $width;
+}

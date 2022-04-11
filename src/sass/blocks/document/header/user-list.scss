@@ -1,0 +1,84 @@
+
+.user-list_login {
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-between;
+    background: transparent;
+    border-bottom: none;
+    border-top: none;
+    text-transform: none;
+
+    padding: 17px 21px;
+
+    @media (min-width: $tablet-width) {
+        padding: 25px 23px;
+
+        &:hover .nav__login-icon {
+            opacity: 1;
+            fill: #826550;
+        }
+
+        &:active .nav__login-icon {
+            opacity: 0.3;
+            fill: white;
+        }
+    }
+
+    @media (min-width: $desktop-width) {
+        width: auto;
+        height: auto;
+        padding: 25px 23px;
+
+        font-size: 18px;
+        line-height: 24px;
+        text-transform: uppercase;
+
+        &:hover {
+            color: black;
+            background-color: white;
+        }
+
+        &:active {
+            color: rgba(0, 0, 0, 0.3);
+            background-color: white;
+        }
+
+        &:hover .nav__login-icon {
+            opacity: 0.3;
+            fill: black;
+        }
+
+        &:active .nav__login-icon {
+            opacity: 0.1;
+        }
+    }
+}
+
+.nav__login-icon {
+    width: 16px;
+    height: 16px;
+    opacity: 0.3;
+    fill: #ffffff;
+
+    transition: all 300ms ease-in-out;
+
+    @media (max-width: $mobile-width) {
+        margin-right: 10px;
+    }
+
+    @media (min-width: $desktop-width) {
+        margin-right: 10px;
+    }
+}
+
+.nav__login-text {
+
+    @media (min-width: $tablet-width) {
+        display: none;
+    }
+
+    @media (min-width: $desktop-width) {
+        display: inline;
+        opacity: 1;
+    }
+}

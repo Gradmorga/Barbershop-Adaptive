@@ -1,0 +1,32 @@
+
+.logo {
+    width: 226px;
+    height: 85px;
+
+    @media (min-width: $tablet-width) {
+        display: block;
+        width: 500px;
+        height: auto;
+        margin: 40px auto 0 auto;
+    }
+
+    @media (min-width: $desktop-width) {
+        margin-top: 100px;
+    }
+}
+
+.logo-mustache {
+    display: none;
+
+    @media (min-width: $desktop-width) {
+        display: block;
+    }
+}
+
+.logo-title {
+    display: none;
+
+    @media (min-width: $tablet-width) {
+        display: block;
+    }
+}

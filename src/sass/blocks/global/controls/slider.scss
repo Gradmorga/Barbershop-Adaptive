@@ -1,0 +1,37 @@
+
+.slider__item {
+    display: none;
+
+    &--current {
+        display: flex;
+    }
+
+    @media (min-width: $tablet-width) {
+        display: flex;
+    }
+}
+
+.slider__toggles {
+    justify-content: center;
+    align-items: center;
+}
+
+.slider__toggle {
+    padding: 0;
+    margin: 20px;
+
+    width: 12px;
+    height: 12px;
+
+    background-color: transparent;
+
+    transform: rotate(45deg);
+
+    &:active {
+        opacity: 0.3;
+    }
+
+    @media (max-width: $mobile-width) {
+        margin: 15px;
+    }
+}

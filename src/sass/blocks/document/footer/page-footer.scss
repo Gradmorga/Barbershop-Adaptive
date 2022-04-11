@@ -1,0 +1,157 @@
+
+.footer__wrapper {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 70px;
+    margin-bottom: 20px;
+
+    @media (min-width: $tablet-width) {
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+
+    @media (min-width: $desktop-width) {
+        flex-wrap: nowrap;
+    }
+}
+
+.footer__contacts {
+    flex-basis: 100vw;
+
+    @media (min-width: $tablet-width) {
+        flex-basis: 60vw;
+        flex-grow: 1;
+    }
+
+    @media (min-width: $desktop-width) {
+        flex-basis: 30vw;
+        flex-grow: 0;
+    }
+}
+
+.footer__social {
+    margin: 40px auto 0 auto;
+
+    @media (min-width: $tablet-width) and (max-width: $desktop-width) {
+        order: 3;
+
+        margin-top: 50px;
+    }
+
+    @media (min-width: $desktop-width) {
+        order: 0;
+        flex-basis: 15vw;
+
+        margin: 0 auto 0 0;
+    }
+}
+
+.footer__socials {
+    @media (min-width: $tablet-width) {
+        margin-top: 5px;
+    }
+}
+
+.footer__copyright {
+    flex-basis: 100vw;
+    margin-top: 40px;
+
+    @media (min-width: $tablet-width) {
+        flex-basis: 20vw;
+        margin-top: 0;
+    }
+
+    @media (min-width: $desktop-width) {
+        flex-basis: 10vw;
+    }
+}
+
+.contacts {
+    text-align: center;
+
+    @media (min-width: $tablet-width) {
+        text-align: left;
+    }
+}
+
+.contacts__info {
+    margin: 0;
+}
+
+.contacts__phone {
+    text-decoration: none;
+
+    display: block;
+
+    margin-top: 15px;
+
+    @media (max-width: $mobile-width) {
+        padding: 20px 0;
+        border: 1px solid rgba(255, 255, 255, 0.3);
+        margin: 20px 0 0;
+    }
+}
+
+.contacts__prefix {
+    @media (max-width: $mobile-width) {
+        display: none;
+    }
+}
+
+.footer__social-text {
+    display: none;
+
+    @media (min-width: $tablet-width) {
+        display: block;
+        text-align: center;
+    }
+}
+
+.social__item {
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.footer__item {
+    flex-grow: 1;
+}
+
+.social__icon {
+    width: 40px;
+    height: 40px;
+
+    @media (min-width: $desktop-width) {
+        width: 30px;
+        height: 30px;
+    }
+}
+
+.social__link {
+    display: block;
+    text-align: center;
+    padding: 10px;
+    transition: background-color 300ms ease-in-out;
+
+    &:hover {
+        background-color: $brawn;
+    }
+}
+
+.copyright__link {
+    display: block;
+
+    text-decoration: none;
+    font-weight: bold;
+
+    padding: 15px 0;
+    margin-top: 5px;
+
+    border: 1px solid rgba(255, 255, 255, 0.3);
+
+    text-align: center;
+}
+
+.copyright__text {
+    display: block;
+    text-align: center;
+}
