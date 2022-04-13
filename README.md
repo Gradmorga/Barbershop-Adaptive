@@ -1,13 +1,13 @@
 # Barbershop "Borodinski". Modern and adaptive UI.
 
 ### Description
-This is simple web server which holds HTML/CSS adaptive markup with rich functional features.
+This is simple project that aims to demonstrate modern and responsive HTML/CSS markup with rich features.
 
 To get more information and statistical reports, please visit screenshot folder.
 
 
 ### Features
-- Adaptive markup for different platforms and also images for retina displays;
+- Adaptive markup for different platforms;
 - Retina display support;
 - Styles according to BEM methodology;
 - Usage of many Js plugins;
